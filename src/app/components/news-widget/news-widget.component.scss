@@ -1,0 +1,29 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.header {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: flex-start;
+}
+
+.title {
+    background: #d2bef1;
+    border-radius: 20px;
+    padding: 10px;
+    margin-right: 15px;
+}
+
+.cards-holder {
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+app-news-card {
+    width: calc(100% / 3 - 15px);
+}

@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@use 'styles/reset';
+
+html {
+    @include mat.theme((color: mat.$violet-palette,
+            typography: Space Mono,
+            density: 0));
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 10px;
+    margin: 0;
+}
