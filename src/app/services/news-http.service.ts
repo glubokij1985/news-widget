@@ -10,7 +10,7 @@ export class NewsHttpService {
     constructor(private _http: HttpClient) { }
 
     public getNews(categoryId: string): Observable<INewsResult> {
-        return this._http.get<INewsResult>(`https://newsapi.org/v2/top-headlines?country=us&apiKey=1ae4c0a13b664743910511d26a5140de&category=${categoryId}`).pipe(
+        return this._http.get<INewsResult>(`${this._apiUrl}&category=${categoryId}`).pipe(
             catchError((error: HttpErrorResponse) => {
                 console.error('Error:', error);
 

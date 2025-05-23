@@ -6,9 +6,8 @@ module.exports = withModuleFederationPlugin({
     exposes: {
         './Component': './src/app/app.component.ts',
         './NewsWidgetComponent': './src/app/components/news-widget/news-widget.component.ts',
-        './NewsWidgetModule': './src/app/components/news-widget/news-widget.module.ts',
     },
     shared: {
-        ...shareAll({ singleton: true, strictVersion: true, requiredVersion: 'auto' }),
+        ...shareAll({ singleton: true, requiredVersion: 'auto' }),
     },
 });
